@@ -14,7 +14,9 @@ setupCounter(document.querySelector("#counter"));
 
 document.getElementById("notifyBtn").addEventListener("click", async () => {
   try {
-    const res = await fetch("http://localhost:3000/notify", { method: "POST" });
+    const res = await fetch("https://notification-zx0v.onrender.com/notify", {
+      method: "POST",
+    });
     if (res.ok) alert("Уведомления отправлены!");
     else alert("Ошибка при отправке уведомлений");
   } catch (err) {
